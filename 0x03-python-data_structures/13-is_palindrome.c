@@ -9,7 +9,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *checker = *head, *firsthalf = *head, *secondhalf = *head;
+	listint_t *checker = *head, *secondhalf = *head;
 	int nodes = 0;
 	int checkpos;
 	int checkcounter;
@@ -37,9 +37,9 @@ int is_palindrome(listint_t **head)
 			checker = checker->next;
 			checkcounter++;
 		}
-		if (firsthalf->n == checker->n)
+		if ((*head)->n == checker->n)
 		{
-			firsthalf = firsthalf->next;
+			*head = (*head)->next;
 			checkpos--;
 			counter++;
 		}
