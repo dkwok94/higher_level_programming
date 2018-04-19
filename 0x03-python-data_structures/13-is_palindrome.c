@@ -10,10 +10,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *checker = *head, *firsthalf = *head, *secondhalf = *head;
-	int nodes = 0;
-	int checkpos;
-	int checkcounter;
-	int counter = 0;
+	int nodes = 0, checkpos, checkcounter, counter = 0;
 
 	if (head == NULL || *head == NULL)
 		return (1);
@@ -30,6 +27,7 @@ int is_palindrome(listint_t **head)
 		secondhalf = secondhalf->next;
 		counter++;
 	}
+	counter = 0;
 	while (counter <= nodes / 2)
 	{
 		checker = secondhalf;
