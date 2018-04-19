@@ -34,7 +34,7 @@ int palindrome_rec(listint_t **head, listint_t *tail)
 
 int is_palindrome(listint_t **head)
 {
-	if (head == NULL || *head == NULL)
+	if (*head == NULL)
 		return (1);
 
 	if ((*head)->next == NULL)
