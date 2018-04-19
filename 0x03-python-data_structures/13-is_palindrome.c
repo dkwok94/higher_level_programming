@@ -2,49 +2,42 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- *is_palindrome - checks if a singly linked list is a palindrome
- *@head: the head of the linked list
+ * palindrome_rec - Iterates through a list recursively
+ * @head: head of the list
+ * @tail: iterates to the end of the list
  *
- *Return: 0 if not a palindrome, 1 if it is a palindrome
+ * Return: 1 if a palindrome, 0 if not a palindrome
  */
+
+int palindrome_rec(listint_t *head, listint_t *tail)
+{
+	if (tail == NULL)
+		return (1);
+
+	if (palindrome_rec(head, tail->next) == 1 && head->n == tail->n)
+	{
+		head = head->next;
+		return (1);
+	}
+
+	else
+		return (0);
+}
+
+
+/**
+ * is_palindrome - checks if linked list is a palindrome
+ * @head: head of the list
+ *
+ * Return: 1 if a palindrome, 0 if not a palindrome
+ */
+
 int is_palindrome(listint_t **head)
 {
-	listint_t *checker = *head, *firsthalf = *head, *secondhalf = *head;
-	int nodes = 0, checkpos, checkcounter, counter = 0;
-
 	if (head == NULL || *head == NULL)
 		return (1);
-	while (checker != NULL)
-	{
-		nodes++;
-		checker = checker->next;
-	}
-	if (nodes == 1)
+	if ((*head)->next == NULL)
 		return (1);
-	checkpos = nodes;
-	while (counter < (nodes / 2) - 1)
-	{
-		secondhalf = secondhalf->next;
-		counter++;
-	}
-	counter = 0;
-	while (counter <= nodes / 2)
-	{
-		checker = secondhalf;
-		checkcounter = nodes / 2;
-		while (checkcounter < checkpos)
-		{
-			checker = checker->next;
-			checkcounter++;
-		}
-		if (firsthalf->n == checker->n)
-		{
-			firsthalf = firsthalf->next;
-			checkpos--;
-			counter++;
-		}
-		else
-			return (0);
-	}
-		return (1);
+
+	return (palindrome_rec(*head, *head));
 }
