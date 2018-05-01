@@ -3,7 +3,7 @@
 
 class Square():
     """Square class of a quadrilateral with four equal sides
-       
+
        Attributes:
            None
     """

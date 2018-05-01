@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""Documentation of a square class"""
+
 class Square():
     """Square class for quadrilateral with four equal sides"""
+
     def __init__(self, size=0, position=(0, 0)):
         """Sets the initial size and position of an instantiated object
            Throws an error when size is not integer or when position is not
@@ -9,6 +12,11 @@ class Square():
         Args:
             size (int, optional): the size of the square object
             position (tuple, optional): the position of the object when printed
+
+        Raises:
+            TypeError: when the value passed is not an integer or a two integer
+            tuplet
+            ValueError: when the value passed is less than 0
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -41,6 +49,11 @@ class Square():
 
         Args:
             value (int): the size of the square object to reset to
+
+        Raises:
+            TypeError: when the value passed is not an integer or a two integer
+            tuplet
+            ValueError: when the value passed is less than 0
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -64,6 +77,11 @@ class Square():
 
         Args:
             value (tuple): a tuple of two integers defining the position
+
+        Raises:
+            TypeError: when the value passed is not an integer or a two integer
+            tuplet
+            ValueError: when the value passed is less than 0
         """
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")

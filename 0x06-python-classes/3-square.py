@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Documentation for a square class"""
+
 class Square():
     """Square class for a quadrilateral with four equal sides"""
 
@@ -8,6 +10,10 @@ class Square():
 
         Args:
             size (int, optional): the size of the square object
+
+        Raises:
+            TypeError: When the value passed in is not an integer
+            ValueError: When the value passed in is less than 0
         """
 
         if not isinstance(size, int):
