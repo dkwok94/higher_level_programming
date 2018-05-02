@@ -112,6 +112,10 @@ class Square():
     def my_print(self):
         """Prints the current square object with a size and at a position"""
 
+        if self.__size == 0:
+            print()
+            return
+
         if self.__position[0] >= 0 and self.__position[1] >= 0:
             for height in range(self.__position[1]):
                 print()
