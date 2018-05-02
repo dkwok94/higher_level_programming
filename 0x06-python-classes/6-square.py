@@ -46,7 +46,7 @@ class Square():
         Returns:
             size of the current square object
         """
-        return self.size
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -74,7 +74,7 @@ class Square():
         Returns:
             the current position of the square object
         """
-        return self.position
+        return self.__position
 
     @position.setter
     def position(self, value):
@@ -111,9 +111,6 @@ class Square():
 
     def my_print(self):
         """Prints the current square object with a size and at a position"""
-        if self.__size == 0:
-            print()
-            return
 
         if self.__position[0] >= 0 and self.__position[1] >= 0:
             for height in range(self.__position[1]):
