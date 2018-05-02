@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Documentation for a square class"""
 
+
 class Square():
     """Square class for a quadrilateral with four equal sides"""
 
