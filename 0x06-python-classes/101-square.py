@@ -127,11 +127,10 @@ class Square():
                 print('#', end='')
             print()
 
-
     def __str__(self):
         square = []
         if self.__size == 0:
-            return '\n'
+            return ''
         for newlines in range(self.__position[1]):
             square.append('\n')
         for rows in range(self.__size):
