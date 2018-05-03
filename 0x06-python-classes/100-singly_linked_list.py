@@ -79,6 +79,8 @@ class Node():
 
 
 class SinglyLinkedList():
+    """Singly-linked list class - starts out empty"""
+
     def __init__(self):
         """Initializes an empty singly linked list object"""
 
