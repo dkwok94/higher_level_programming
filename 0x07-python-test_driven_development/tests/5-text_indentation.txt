@@ -95,6 +95,63 @@ be printed
 	 <BLANKLINE>
 	 Holberton School
 
+	 >>> string = "Hello          ."
+
+	 >>> text_indentation(string)
+	 Hello          .
+	 <BLANKLINE>
+
+	 >>> string = "Hello     . My     name     is     Derek:     Yo"
+
+	 >>> text_indentation(string)
+	 Hello     .
+	 <BLANKLINE>
+	 My     name     is     Derek:
+         <BLANKLINE>
+  	 Yo
+
+	 >>> string = "Hello     . Derek     ? Name     :"
+
+	 >>> text_indentation(string)
+	 Hello     .
+	 <BLANKLINE>
+	 Derek     ?
+	 <BLANKLINE>
+	 Name     :
+	 <BLANKLINE>
+
+	 >>> string = "Hello     .     ."
+
+	 >>> text_indentation(string)
+     	 Hello     .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+
+	 >>> string = ".     .     .     ."
+
+	 >>> text_indentation(string)
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+
+	 >>> string = ".     .     .     .     "
+
+	 >>> text_indentation(string)
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+
 Characters:
 
 	>>> string = 'D'
