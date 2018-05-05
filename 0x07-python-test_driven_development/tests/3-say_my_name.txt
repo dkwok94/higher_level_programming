@@ -49,6 +49,9 @@ The first and last name inputs must be strings
 	 >>> say_my_name(" ", "Kwok")
 	 My name is   Kwok
 
+	 >>> say_my_name("Derek", " ")
+	 My name is Derek  
+
 Characters
 
 	  >>> say_my_name('D', 'K')
@@ -59,7 +62,6 @@ Characters
 
 	  >>> say_my_name('D', "Kwok")
 	  My name is D Kwok
-
 
 Errors
 ======

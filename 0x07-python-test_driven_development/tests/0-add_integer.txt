@@ -87,8 +87,6 @@ TypeErrors
 ==========
 If a or b are not integers, a TypeError should be thrown
 
-If a or b are not integers
-
      	  >>> add_integer(4, "School")
 	  Traceback (most recent call last):
 	  TypeError: b must be an integer
