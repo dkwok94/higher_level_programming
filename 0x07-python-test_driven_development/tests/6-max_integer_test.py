@@ -6,8 +6,11 @@ import unittest
 max_integer = __import__("6-max_integer").max_integer
 
 class TestMaxInteger(unittest.TestCase):
+    """Class for unittest of max_integer program"""
 
     def test_positives(self):
+        """Testing positive numbers"""
+
         test_list = [1, 2, 3, 4]
         self.assertEqual(max_integer(test_list), 4)
 
@@ -39,6 +42,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(test_list), 15)
 
     def test_negatives(self):
+        """Testing negative numbers"""
+
         test_list = [-2, 0, 2, 4]
         self.assertEqual(max_integer(test_list), 4)
 
@@ -49,6 +54,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(test_list), -4.08)
 
     def test_none_and_zero(self):
+        """Testing None and zeros"""
+
         test_list = []
         self.assertEqual(max_integer(test_list), None)
 
@@ -64,6 +71,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(test_list), None)
 
     def test_not_list(self):
+        """Testing incorrect data types"""
+
         test_list = [1, 2, "Derek", 4]
         self.assertRaises(TypeError)
 

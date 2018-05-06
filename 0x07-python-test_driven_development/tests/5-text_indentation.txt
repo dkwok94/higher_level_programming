@@ -152,6 +152,18 @@ be printed
 	 .
 	 <BLANKLINE>
 
+	 >>> string = "...."
+
+	 >>> text_indentation(string)
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+	 .
+	 <BLANKLINE>
+
 Characters:
 
 	>>> string = 'D'
