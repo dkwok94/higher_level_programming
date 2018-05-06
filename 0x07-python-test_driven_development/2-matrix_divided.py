@@ -12,7 +12,22 @@ def matrix_divided(matrix, div):
     Returns:
         new matrix containing the divided numbers
     """
-
+    if matrix is None:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/\
+floats")
+    if len(matrix) == 0:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/\
+floats")
+    if type(matrix) == tuple or type(matrix) == set:
+            raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
+    for i in matrix:
+        if len(i) == 0:
+            raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
+        if type(i) == tuple or type(i) == set:
+            raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if isinstance(div, int) is False and isinstance(div, float) is False:

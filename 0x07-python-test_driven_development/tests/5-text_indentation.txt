@@ -68,6 +68,16 @@ Long Strings:
 	   <BLANKLINE>
 	   Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
+	   >>> string = "Hello World"
+
+	   >>> text_indentation(string)
+	   Hello World
+
+	   >>> string = "     Hello World      "
+
+	   >>> text_indentation(string)
+	   Hello World
+
 Multiple Spaces
 ===============
 If there are multiple spaces after the three punctuation marks, they should not
