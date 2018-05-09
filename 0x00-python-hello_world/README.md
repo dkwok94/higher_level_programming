@@ -36,21 +36,35 @@ This project was a brief introduction to the Python programming language. Concep
 ## Tasks
 ### Mandatory
 **[0-run](0-run)** - Runs a Python script via an environment variable `$PYFILE`
+
 **[1-run_inline](1-run_inline)** - Runs Python code via an environment variable `$PYCODE`
+
 **[2-print.py](2-print.py)** - Prints `\"Programming is like building a multilingual puzzle` followed by a new line using `print`
+
 **[3-print_number.py](3-print_number.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py) to print the integer stored in `number` followed by `Battery street`
+
 **[4-print_float.py](4-print_float.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py) to print the float stored in `number` to a precision of 2 digits
+
 **[5-print_string.py](5-print_string.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py) to print the string in `str` three times followed by its first 9 characters on a newline
+
 **[6-concat.py](6-concat.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) to print `Welcome to Holberton School!`
+
 **[7-edges.py](7-edges.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py) to print the first 3 letters of `word`, the last 2 letters of `word`, and the value of `word` without the first and last characters, using only 8 lines of code maximum
+
 **[8-concat_edges.py](8-concat_edges.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py) to print `object-oriented programming with Python` followed by a new line
+
 **[9-easter_egg.py](9-easter_egg.py)** - Python script that prints the \"Zen of Python\" followed by a new line
+
 **[10-check_cycle.c](10-check_cycle.c)** - C program that identifies whether a linked list has a cycle or not
+
 **[lists.h](lists.h)** - Header file for `10-check_cycle.c`
 
 ### Advanced
+
 **[100-write.py](100-write.py)** - Prints `and that piece of art is useful - Dora Korpar, 2015-10-19` using `write` only and printing to the `stderr` with an exit code of `1`
+
 **[101-compile](101-compile)** - Script that compiles a Python script file where the filename is stored in an environment variable `$PYFILE` and the output file is `$PYFILEc`
+
 **[102-magic_calculation.py](102-magic_calculation.py)** - A translation of the following Python bytecode into Python code
 ```
   3           0 LOAD_CONST               1 (98)
