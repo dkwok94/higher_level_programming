@@ -41,6 +41,9 @@ If the divisor passed in is a number, the division should happen normally
 	>>> matrix_divided([[1, 2, 3]], 1)
 	[[1.0, 2.0, 3.0]]
 
+	>>> matrix_divided(matrix, float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
 Negative Numbers
 
 	 >>> matrix_divided(matrix, -1)
@@ -144,3 +147,13 @@ If matrix is not a list of lists of integers or floats
 	 >>> matrix_divided(matrix, 3)
 	 Traceback (most recent call last):
 	 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Missing Arguments
+
+	 >>> matrix_divided(matrix)
+	 Traceback (most recent call last):
+	 TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+	 >>> matrix_divided()
+	 Traceback (most recent call last):
+	 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
