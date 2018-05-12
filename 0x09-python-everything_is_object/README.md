@@ -31,7 +31,14 @@ The only script is as follows:
 * Input list contains any type of objects
 * Maximum of three lines
 * no imported module
-
+```
+vagrant:0x09-python-everything_is_object$ ./19-main.py
+[1, 2, 3]
+[1, 2, 3]
+[1, 2, 3]
+True
+False
+```
 ### Advanced
 This part of the project also consisted of a section with the same format and text file answers as the previous section. These were additional "brain teasers" about how objects worked in Python.
 
@@ -39,5 +46,17 @@ I did one of the advanced scripts and it is below:
 **[100-magic_string.py](100-magic_string.py)** - Returns a string n times the number of the iteration
 * Maximum of four lines
 * no imported module
-
+```
+vagrant:0x09-python-everything_is_object$ ./100-main.py
+Holberton
+Holberton, Holberton
+Holberton, Holberton, Holberton
+Holberton, Holberton, Holberton, Holberton
+Holberton, Holberton, Holberton, Holberton, Holberton
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
+Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
+```
 2018 - All programs written by Derek Kwok at [Holberton School](https://www.holbertonschool.com/)
