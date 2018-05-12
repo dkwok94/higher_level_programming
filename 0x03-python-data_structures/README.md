@@ -185,4 +185,4 @@ Linked list is a palindrome
 
 **[lists.h](lists.h)** - The header file for 13-is_palindrome
 
-2018 - All programs written by Derek Kwok at [Holberton School](https://www.holbertonschool.com/)
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
