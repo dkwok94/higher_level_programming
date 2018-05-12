@@ -15,13 +15,13 @@ This project focused on Test-Driven Development (TDD) and the associated test mo
 * The length of your files will be tested using `wc`
 
 ### Python Test Cases
-Allowed editors: `vi`, `vim`, `emacs`
-All your files should end with a new line
-All your test files should be inside a folder `tests`
-All your test files should be text files (extension: `.txt`)
-All your tests should be executed by using this command: `python3 -m doctest ./tests/*`
-All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
-All your functions should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'`)
+* Allowed editors: `vi`, `vim`, `emacs`
+* All your files should end with a new line
+* All your test files should be inside a folder `tests`
+* All your test files should be text files (extension: `.txt`)
+* All your tests should be executed by using this command: `python3 -m doctest ./tests/*`
+* All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
+* All your functions should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'`)
 
 ## Tasks
 ### Mandatory
@@ -126,6 +126,16 @@ Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
 **[tests/6-max_integer_test.py](tests/6-max_integer_test.py)** - A unittest module for a maximum integer program
 * Should be executed with the command `python3 -m unittest tests.6-max_integer_test`
+```
+vagrant:0x07-python-test_driven_development$ python3 -m unittest tests.6-max_integer
+_test
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+OK
+
+```
 
 
 2018 - All programs written by Derek Kwok at [Holberton School](https://www.holbertonschool.com/)
