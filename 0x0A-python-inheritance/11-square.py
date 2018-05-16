@@ -23,7 +23,7 @@ class BaseGeometry:
             ValueError: if the value is less than or equal to 0
         """
 
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
@@ -91,4 +91,10 @@ class Square(Rectangle):
         return self.__size ** 2
 
     def __str__(self):
+        """The function for use in print() and str()
+
+        Returns:
+            Specially formated string
+        """
+
         return "[Square] {}/{}".format(self.__size, self.__size)
