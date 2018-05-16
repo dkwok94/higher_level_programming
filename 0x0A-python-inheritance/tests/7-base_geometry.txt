@@ -127,6 +127,15 @@ TypeErrors:
      Traceback (most recent call last):
      TypeError: int must be an integer
 
+     >>> bg = BaseGeometry()
+     >>> bg.area()
+     Traceback (most recent call last):
+     Exception: area() is not implemented
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator(1, 2, 3)
+     Traceback (most recent call last):
+     TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 ValueErrors:
 
