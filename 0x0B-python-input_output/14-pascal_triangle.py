@@ -1,5 +1,17 @@
 #!/usr/bin/python3
+"""Documentation for a pascal_triangle function"""
+
+
 def pascal_triangle(n):
+    """Prints a list of lists of a pascal triangle
+
+    Args:
+        n (int): the number of row of the Pascal Triangle
+
+    Returns:
+        The Pascal Triangle as a list of lists
+    """
+
     triangle = []
     prev_row = [1]
     row = 0
