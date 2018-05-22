@@ -29,8 +29,8 @@ class Rectangle(Base):
     def __str__(self):
         """Overloads the __str__ method to print specific syntax"""
 
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
-                                                       self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
 
     @property
     def width(self):
