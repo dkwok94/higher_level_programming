@@ -118,6 +118,48 @@ class TestRectangle(unittest.TestCase):
         sys.stdout = sys.__stdout__
         self.assertEqual("[Rectangle] (1) 1/0 - 5/5\n", loc_stdout.getvalue())
 
+
+    def test_update_rect_args(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 10, 10, 10)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/10")
+
+        r1.update(89)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 10/10")
+
+        r1.update(89, 2)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 2/10")
+
+        r1.update(89, 2, 3)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 2/3")
+
+        r1.update(89, 2, 3, 4)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/10 - 2/3")
+
+        r1.update(89, 2, 3, 4, 5)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/5 - 2/3")
+
+
+    def test_update_rect_kwargs(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 10, 10, 10)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/10")
+
+        r1.update(height=1)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/1")
+
+        r1.update(width=1, x=2)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 2/10 - 1/1")
+
+        r1.update(y=1, width=2, x=3, id=89)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 3/1 - 2/1")
+
+        r1.update(x=1, height=2, y=3, width=4)
+        self.assertEqual(r1.__str__(), "[Rectangle] (89) 1/3 - 4/2")
+
+
     def test_setter_height_width_errors(self):
         Base._Base__nb_objects = 0
 
