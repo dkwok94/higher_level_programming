@@ -4,7 +4,10 @@
 
 import os
 import json
+
+
 class Base:
+
     """Base class"""
 
     __nb_objects = 0
@@ -23,7 +26,6 @@ class Base:
             type(self).__nb_objects += 1
             self.id = type(self).__nb_objects
 
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns the JSON representation of list_dictionaries
@@ -39,7 +41,6 @@ class Base:
             return "[]"
 
         return json.dumps(list_dictionaries)
-
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -57,9 +58,8 @@ class Base:
                 list_objects.append(i.to_dictionary())
         json_string = Base.to_json_string(list_objects)
         with open("{}.json".format(cls.__name__), mode='w', encoding='utf-8')\
- as file:
+                as file:
             file.write(json_string)
-
 
     @staticmethod
     def from_json_string(json_string):
@@ -73,7 +73,6 @@ class Base:
         if json_string is None or json_string is "":
             return []
         return json.loads(json_string)
-
 
     @classmethod
     def create(cls, **dictionary):
@@ -94,7 +93,6 @@ class Base:
             new_base = cls(1)
         new_base.update(**dictionary)
         return new_base
-
 
     @classmethod
     def load_from_file(cls):

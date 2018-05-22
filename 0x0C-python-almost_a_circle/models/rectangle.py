@@ -3,7 +3,10 @@
 
 
 from models.base import Base
+
+
 class Rectangle(Base):
+
     """Rectangle class which inherits from Base class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -26,8 +29,8 @@ class Rectangle(Base):
     def __str__(self):
         """Overloads the __str__ method to print specific syntax"""
 
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,\
- self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                       self.y, self.width, self.height)
 
     @property
     def width(self):

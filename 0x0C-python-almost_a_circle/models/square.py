@@ -3,7 +3,10 @@
 
 
 from models.rectangle import Rectangle
+
+
 class Square(Rectangle):
+
     """Square class that inherits from the Rectangle class
        which in turn inherited from the Base class
     """
@@ -23,8 +26,8 @@ class Square(Rectangle):
     def __str__(self):
         """Overloading the __str__ method to return certain string"""
 
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, \
-self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.width)
 
     @property
     def size(self):
@@ -44,7 +47,7 @@ self.y, self.width)
             value (int): the size of the Square attribute
         """
 
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
@@ -85,7 +88,6 @@ self.y, self.width)
                     if i == 'y':
                         self.y = kwargs['y']
 
-
     def to_dictionary(self):
         """Returns the dictionary representation of the object
 
@@ -99,4 +101,3 @@ self.y, self.width)
         dictionary['x'] = self.x
         dictionary['y'] = self.y
         return dictionary
-
