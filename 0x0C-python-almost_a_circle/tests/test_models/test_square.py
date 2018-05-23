@@ -199,6 +199,64 @@ class TestSquare(unittest.TestCase):
         expected_dict = {'id': 10, 'x': 10, 'size': 10, 'y': 10}
         self.assertEqual(s1_dictionary, expected_dict)
 
+    def test_setter_size_type(self):
+        """Test errors from setter"""
+
+        Base._Base__nb_objects = 0
+
+        self.assertRaises(TypeError, Square)
+        self.assertRaises(TypeError, Square, [1, 2])
+        self.assertRaises(TypeError, Square, (1, 2))
+        self.assertRaises(TypeError, Square, 12.5)
+        self.assertRaises(TypeError, Square, {1, 2})
+        self.assertRaises(TypeError, Square, float('inf'))
+        self.assertRaises(TypeError, Square, float('NaN'))
+
+    def test_setter_width_zero_neg(self):
+        """Test errors from setter"""
+
+        Base._Base__nb_objects = 0
+
+        self.assertRaises(ValueError, Square, 0)
+        self.assertRaises(ValueError, Square, -5)
+
+    def test_setter_x_type(self):
+        """Test errors from setter"""
+
+        Base._Base__nb_objects = 0
+
+        self.assertRaises(TypeError, Square, 2, [1, 2], 2)
+        self.assertRaises(TypeError, Square, 2, (1, 2), 2)
+        self.assertRaises(TypeError, Square, 2, 12.5, 2)
+        self.assertRaises(TypeError, Square, 2, {1, 2}, 2)
+        self.assertRaises(TypeError, Square, 2, float('inf'), 2)
+        self.assertRaises(TypeError, Square, 2, float('NaN'), 2)
+
+    def test_setter_x_neg(self):
+        """Test errors from setter"""
+
+        Base._Base__nb_objects = 0
+
+        self.assertRaises(ValueError, Square, 2, -5, 2)
+
+    def test_setter_y_type(self):
+        """Test errors from setter"""
+
+        Base._Base__nb_objects = 0
+
+        self.assertRaises(TypeError, Square, 2, 2, [1, 2])
+        self.assertRaises(TypeError, Square, 2, 2, (1, 2))
+        self.assertRaises(TypeError, Square, 2, 2, 12.5)
+        self.assertRaises(TypeError, Square, 2, 2, {1, 2})
+        self.assertRaises(TypeError, Square, 2, 2, float('inf'))
+        self.assertRaises(TypeError, Square, 2, 2, float('NaN'))
+
+    def test_setter_y_neg(self):
+        """Test errors from setter"""
+
+        Base._Base__nb_objects = 0
+
+        self.assertRaises(ValueError, Square, 2, 2, -5)
 
 if __name__ == '__main__':
     unittest.main()
