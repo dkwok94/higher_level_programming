@@ -334,21 +334,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1_dictionary, expected_dict)
         self.assertEqual(r1.__str__(), "[Rectangle] (10) 10/10 - 10/10")
 
-    def test_dictionary_json(self):
-        """Test dictionary to JSON"""
-
-        Base._Base__nb_objects = 0
-
-        r1 = Rectangle(10, 7, 2, 8)
-        dictionary = r1.to_dictionary()
-        json_dictionary = Base.to_json_string([dictionary])
-        expected_dict = {'width': 10, 'height': 7, 'x': 2, 'y': 8, 'id': 1}
-        self.assertEqual(dictionary, expected_dict)
-        self.assertEqual(type(dictionary), dict)
-        jsn = "[{\"width\": 10, \"height\": 7, \"x\": 2, \"y\": 8, \"id\": 1}]"
-        self.assertEqual(json_dictionary, jsn)
-        self.assertEqual(type(json_dictionary), str)
-
 
 if __name__ == '__main__':
     unittest.main()

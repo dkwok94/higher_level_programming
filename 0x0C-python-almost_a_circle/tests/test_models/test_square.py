@@ -199,21 +199,6 @@ class TestSquare(unittest.TestCase):
         expected_dict = {'id': 10, 'x': 10, 'size': 10, 'y': 10}
         self.assertEqual(s1_dictionary, expected_dict)
 
-    def test_dictionary_json(self):
-        """Test dictionary to json"""
-
-        Base._Base__nb_objects = 0
-
-        s1 = Square(10, 7, 2, 8)
-        dictionary = s1.to_dictionary()
-        json_dictionary = Base.to_json_string([dictionary])
-        expected_dict = {'size': 10, 'x': 7, 'y': 2, 'id': 8}
-        self.assertEqual(dictionary, expected_dict)
-        self.assertEqual(type(dictionary), dict)
-        expected_json = "[{\"size\": 10, \"x\": 7, \"y\": 2, \"id\": 8}]"
-        self.assertEqual(json_dictionary, expected_json)
-        self.assertEqual(type(json_dictionary), str)
-
 
 if __name__ == '__main__':
     unittest.main()
