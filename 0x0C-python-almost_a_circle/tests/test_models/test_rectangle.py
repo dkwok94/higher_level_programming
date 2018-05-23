@@ -71,6 +71,9 @@ class TestRectangle(unittest.TestCase):
         sys.stdout = sys.__stdout__
         self.assertEqual("####\n####\n####\n####\n", local_stdout.getvalue())
 
+    def test_dispay_rect2(self):
+        Base._Base__nb_objects = 0
+
         r2 = Rectangle(2, 2)
         local_stdout = StringIO()
         sys.stdout = local_stdout
@@ -88,6 +91,9 @@ class TestRectangle(unittest.TestCase):
         r1.display()
         sys.stdout = sys.__stdout__
         self.assertEqual("\n\n  ##\n  ##\n  ##\n", dis_stdout.getvalue())
+
+    def test_display_offset2(self):
+        Base._Base__nb_objects = 0
 
         r2 = Rectangle(3, 2, 1, 0)
         dis_stdout = StringIO()
@@ -109,6 +115,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual("[Rectangle] (12) 2/1 - 4/6\n", loc_stdout.getvalue())
 
 
+    def test_print_test2(self):
+        Base._Base__nb_objects = 0
+
         r2 = Rectangle(5, 5, 1)
         self.assertEqual(r2.__str__(), "[Rectangle] (1) 1/0 - 5/5")
 
@@ -119,24 +128,44 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual("[Rectangle] (1) 1/0 - 5/5\n", loc_stdout.getvalue())
 
 
-    def test_update_rect_args(self):
+    def test_update_rect_args_orig(self):
         Base._Base__nb_objects = 0
 
         r1 = Rectangle(10, 10, 10, 10)
         self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/10")
 
+    def test_update_rect_1args(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 10, 10, 10)
         r1.update(89)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 10/10")
 
+    def test_update_rect_2args(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 10, 10, 10, 89)
         r1.update(89, 2)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 2/10")
 
+    def test_update_rect_3args(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(2, 10, 10, 10, 89)
         r1.update(89, 2, 3)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 10/10 - 2/3")
 
+    def test_update_rect_4args(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(2, 3, 10, 10, 89)
         r1.update(89, 2, 3, 4)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/10 - 2/3")
 
+    def test_update_rect_5args(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(2, 3, 4, 10, 89)
         r1.update(89, 2, 3, 4, 5)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/5 - 2/3")
 
@@ -147,20 +176,36 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(10, 10, 10, 10)
         self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/10")
 
+    def test_update_rect_1kwarg(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 10, 10, 10)
         r1.update(height=1)
         self.assertEqual(r1.__str__(), "[Rectangle] (1) 10/10 - 10/1")
 
+    def test_update_rect_2kwarg(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 1, 10, 10, 1)
         r1.update(width=1, x=2)
         self.assertEqual(r1.__str__(), "[Rectangle] (1) 2/10 - 1/1")
 
+    def test_update_rect_3kwarg(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(1, 1, 2, 10, 1)
         r1.update(y=1, width=2, x=3, id=89)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 3/1 - 2/1")
 
+    def test_update_rect_4kwarg(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(2, 1, 3, 1, 89)
         r1.update(x=1, height=2, y=3, width=4)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 1/3 - 4/2")
 
 
-    def test_setter_height_width_errors(self):
+    def test_setter_width_type(self):
         Base._Base__nb_objects = 0
 
         self.assertRaises(TypeError, Rectangle)
@@ -171,8 +216,14 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, float('inf'), 2)
         self.assertRaises(TypeError, Rectangle, float('NaN'), 2)
 
+    def test_setter_width_zero_neg(self):
+        Base._Base__nb_objects = 0
+
         self.assertRaises(ValueError, Rectangle, 0, 12)
         self.assertRaises(ValueError, Rectangle, -5, 12)
+
+    def test_setter_height_type(self):
+        Base._Base__nb_objects = 0
 
         self.assertRaises(TypeError, Rectangle, 2, [1, 2])
         self.assertRaises(TypeError, Rectangle, 2, (1, 2))
@@ -181,10 +232,13 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 2, float('inf'))
         self.assertRaises(TypeError, Rectangle, 2, float('NaN'))
 
+    def test_setter_height_zero_neg(self):
+        Base._Base__nb_objects = 0
+
         self.assertRaises(ValueError, Rectangle, 12, 0)
         self.assertRaises(ValueError, Rectangle, 12, -5)
 
-    def test_setter_x_y_errors(self):
+    def test_setter_x_type(self):
         Base._Base__nb_objects = 0
 
         self.assertRaises(TypeError, Rectangle, 1, 2, [1, 2], 2)
@@ -194,7 +248,13 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 1, 2, float('inf'), 2)
         self.assertRaises(TypeError, Rectangle, 1, 2, float('NaN'), 2)
 
+    def test_setter_x_neg(self):
+        Base._Base__nb_objects = 0
+
         self.assertRaises(ValueError, Rectangle, 1, 2, -5, 2)
+
+    def test_setter_y_type(self):
+        Base._Base__nb_objects = 0
 
         self.assertRaises(TypeError, Rectangle, 1, 2, 2, [1, 2])
         self.assertRaises(TypeError, Rectangle, 1, 2, 2, (1, 2))
@@ -203,7 +263,49 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 1, 2, 2, float('inf'))
         self.assertRaises(TypeError, Rectangle, 1, 2, 2, float('NaN'))
 
+    def test_setter_y_neg(self):
+        Base._Base__nb_objects = 0
+
         self.assertRaises(ValueError, Rectangle, 1, 2, 2, -5)
+
+    def test_to_dictionary_rect(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 2, 1, 9)
+        r1_dictionary = r1.to_dictionary()
+        expected_dict = {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
+        self.assertEqual(r1_dictionary, expected_dict)
+        self.assertEqual(r1.__str__(), "[Rectangle] (1) 1/9 - 10/2")
+
+        r1.update(x=10, y=10, id=10, height=10, width=10)
+        r1_dictionary = r1.to_dictionary()
+        expected_dict = {'x': 10, 'y': 10, 'id': 10, 'height': 10, 'width': 10}
+        self.assertEqual(r1_dictionary, expected_dict)
+        self.assertEqual(r1.__str__(), "[Rectangle] (10) 10/10 - 10/10")
+
+    def test_dictionary_json(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 7, 2, 8)
+        dictionary = r1.to_dictionary()
+        json_dictionary = Base.to_json_string([dictionary])
+        expected_dict = {'width': 10, 'height': 7, 'x': 2, 'y': 8, 'id': 1}
+        self.assertEqual(dictionary, expected_dict)
+        self.assertEqual(type(dictionary), dict)
+        json = "[{\"width\": 10, \"height\": 7, \"x\": 2, \"y\": 8, \"id\": 1}]"
+        self.assertEqual(json_dictionary, json)
+        self.assertEqual(type(json_dictionary), str)
+
+    def test_json_to_file(self):
+        Base._Base__nb_objects = 0
+
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        expected = "[{\"y\": 8, \"x\": 2, \"id\": 1, \"width\": 10, \"height\": 7}, {\"y\": 0, \"x\": 0, \"id\": 2, \"width\": 2, \"height\": 4}]"
+        with open("Rectangle.json", "r") as file:
+            file_read = file.read()
+        self.assertEqual(file_read, expected)
 
 if __name__ == '__main__':
     unittest.main()
