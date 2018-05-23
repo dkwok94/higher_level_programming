@@ -13,6 +13,8 @@ class TestSquare(unittest.TestCase):
     """Unittest for the Square class"""
 
     def test_setter_getter_size(self):
+        """Test getter and setter"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(5)
@@ -24,6 +26,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s3.size, 3)
 
     def test_square_id(self):
+        """Test square id"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(5)
@@ -36,6 +40,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s3.id, 3)
 
     def test_display_square1(self):
+        """Test display function"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(3)
@@ -46,6 +52,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual("###\n###\n###\n", loc_stdout.getvalue())
 
     def test_display_square2(self):
+        """Test display function"""
+
         Base._Base__nb_objects = 0
 
         s2 = Square(2, 2)
@@ -56,6 +64,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual("  ##\n  ##\n", loc_stdout.getvalue())
 
     def test_display_square3(self):
+        """Test display function"""
+
         Base._Base__nb_objects = 0
 
         s3 = Square(3, 1, 3)
@@ -66,6 +76,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual("\n\n\n ###\n ###\n ###\n", loc_stdout.getvalue())
 
     def test_square_area(self):
+        """Test area function"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(3)
@@ -80,54 +92,72 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s3.id, 3)
 
     def test_string_format1(self):
+        """Test format of string"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(3)
         self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 3")
 
     def test_string_format2(self):
+        """Test format of string"""
+
         Base._Base__nb_objects = 0
 
         s2 = Square(2, 2)
         self.assertEqual(s2.__str__(), "[Square] (1) 2/0 - 2")
 
     def test_string_format3(self):
+        """Test format of string"""
+
         Base._Base__nb_objects = 0
 
         s3 = Square(3, 1, 3)
         self.assertEqual(s3.__str__(), "[Square] (1) 1/3 - 3")
 
     def test_update_square_orig(self):
+        """Test update function"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(5)
         self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 5")
 
     def test_update_square_1args(self):
+        """Test update function"""
+
         Base._Base__nb_objects = 0
         s1 = Square(5)
         s1.update(10)
         self.assertEqual(s1.__str__(), "[Square] (10) 0/0 - 5")
 
     def test_update_square_2args(self):
+        """Test update function"""
+
         Base._Base__nb_objects = 0
         s1 = Square(5)
         s1.update(1, 2)
         self.assertEqual(s1.__str__(), "[Square] (1) 0/0 - 2")
 
     def test_update_square_3args(self):
+        """Test update function"""
+
         Base._Base__nb_objects = 0
         s1 = Square(1, 2)
         s1.update(1, 2, 3)
         self.assertEqual(s1.__str__(), "[Square] (1) 3/0 - 2")
 
     def test_update_square_4args(self):
+        """Test update function"""
+
         Base._Base__nb_objects = 0
         s1 = Square(1, 2, 3)
         s1.update(1, 2, 3, 4)
         self.assertEqual(s1.__str__(), "[Square] (1) 3/4 - 2")
 
     def test_update_square_1kwarg(self):
+        """Test update function"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(1, 2, 3, 4)
@@ -135,6 +165,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.__str__(), "[Square] (4) 12/3 - 1")
 
     def test_update_square_2kwarg(self):
+        """Test update function"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(1, 2, 12, 4)
@@ -142,6 +174,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.__str__(), "[Square] (4) 2/1 - 7")
 
     def test_update_square_3kwarg(self):
+        """Test update function"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(1, 7, 12, 1)
@@ -149,6 +183,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.__str__(), "[Square] (89) 7/2 - 8")
 
     def test_to_dictionary_square(self):
+        """Test dictionary function"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(10, 2, 1)
@@ -162,6 +198,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1_dictionary, expected_dict)
 
     def test_dictionary_json(self):
+        """Test dictionary to json"""
+
         Base._Base__nb_objects = 0
 
         s1 = Square(10, 7, 2, 8)
@@ -174,7 +212,6 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(json_dictionary, expected_json)
         self.assertEqual(type(json_dictionary), str)
 
-    def test_json_to_file(self):
 
 if __name__ == '__main__':
     unittest.main()
