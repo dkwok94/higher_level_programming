@@ -5,14 +5,23 @@
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
+from models import square
 from models.square import Square
 from io import StringIO
 import sys
-
+Square = Square
+update = Square.update
+to_dictionary = Square.to_dictionary
 
 class TestSquare(unittest.TestCase):
 
     """Unittest for the Square class"""
+
+    def test_documentation(self):
+        self.assertTrue(len(square.__doc__) > 0)
+        self.assertTrue(len(Square.__doc__) > 0)
+        self.assertTrue(len(update.__doc__) > 0)
+        self.assertTrue(len(to_dictionary.__doc__) > 0)
 
     def test_setter_getter_size(self):
         """Test getter and setter"""

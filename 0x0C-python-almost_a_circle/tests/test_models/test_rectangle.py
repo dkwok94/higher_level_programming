@@ -8,11 +8,25 @@ from models import rectangle
 from models.rectangle import Rectangle
 from io import StringIO
 import sys
+Rectangle = Rectangle
+area = Rectangle.area
+display = Rectangle.display
+update = Rectangle.update
+to_dictionary = Rectangle.to_dictionary
+
 
 
 class TestRectangle(unittest.TestCase):
 
     """Unittest for the Rectangle class"""
+
+    def test_documentation(self):
+        self.assertTrue(len(rectangle.__doc__) > 0)
+        self.assertTrue(len(Rectangle.__doc__) > 0)
+        self.assertTrue(len(area.__doc__) > 0)
+        self.assertTrue(len(display.__doc__) > 0)
+        self.assertTrue(len(update.__doc__) > 0)
+        self.assertTrue(len(to_dictionary.__doc__) > 0)
 
     def test_getter_setter(self):
         """Test setter and getter"""
