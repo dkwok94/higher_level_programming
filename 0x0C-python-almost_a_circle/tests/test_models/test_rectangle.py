@@ -9,7 +9,9 @@ from models.rectangle import Rectangle
 from io import StringIO
 import sys
 
+
 class TestRectangle(unittest.TestCase):
+
     """Unittest for the Rectangle class"""
 
     def test_getter_setter(self):
@@ -49,7 +51,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r4.x, 1)
         self.assertEqual(r4.y, 1)
 
-
     def test_area_rectangle(self):
         """Test area function"""
 
@@ -63,7 +64,6 @@ class TestRectangle(unittest.TestCase):
 
         r3 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r3.area(), 56)
-
 
     def test_display_rect(self):
         """Test display function"""
@@ -88,7 +88,6 @@ class TestRectangle(unittest.TestCase):
         r2.display()
         sys.stdout = sys.__stdout__
         self.assertEqual("##\n##\n", local_stdout.getvalue())
-
 
     def test_display_offset(self):
         """Test display with offset"""
@@ -128,7 +127,6 @@ class TestRectangle(unittest.TestCase):
         sys.stdout = sys.__stdout__
         self.assertEqual("[Rectangle] (12) 2/1 - 4/6\n", loc_stdout.getvalue())
 
-
     def test_print_test2(self):
         """Test print function"""
 
@@ -142,7 +140,6 @@ class TestRectangle(unittest.TestCase):
         print(r2)
         sys.stdout = sys.__stdout__
         self.assertEqual("[Rectangle] (1) 1/0 - 5/5\n", loc_stdout.getvalue())
-
 
     def test_update_rect_args_orig(self):
         """Test update function"""
@@ -197,7 +194,6 @@ class TestRectangle(unittest.TestCase):
         r1.update(89, 2, 3, 4, 5)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 4/5 - 2/3")
 
-
     def test_update_rect_kwargs(self):
         """Test update function"""
 
@@ -241,7 +237,6 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(2, 1, 3, 1, 89)
         r1.update(x=1, height=2, y=3, width=4)
         self.assertEqual(r1.__str__(), "[Rectangle] (89) 1/3 - 4/2")
-
 
     def test_setter_width_type(self):
         """Test errors from setter"""
@@ -350,22 +345,10 @@ class TestRectangle(unittest.TestCase):
         expected_dict = {'width': 10, 'height': 7, 'x': 2, 'y': 8, 'id': 1}
         self.assertEqual(dictionary, expected_dict)
         self.assertEqual(type(dictionary), dict)
-        json = "[{\"width\": 10, \"height\": 7, \"x\": 2, \"y\": 8, \"id\": 1}]"
-        self.assertEqual(json_dictionary, json)
+        jsn = "[{\"width\": 10, \"height\": 7, \"x\": 2, \"y\": 8, \"id\": 1}]"
+        self.assertEqual(json_dictionary, jsn)
         self.assertEqual(type(json_dictionary), str)
 
-    def test_json_to_file(self):
-        """Test JSON to file"""
-
-        Base._Base__nb_objects = 0
-
-        r1 = Rectangle(10, 7, 2, 8)
-        r2 = Rectangle(2, 4)
-        Rectangle.save_to_file([r1, r2])
-        expected = "[{\"y\": 8, \"x\": 2, \"id\": 1, \"width\": 10, \"height\": 7}, {\"y\": 0, \"x\": 0, \"id\": 2, \"width\": 2, \"height\": 4}]"
-        with open("Rectangle.json", "r") as file:
-            file_read = file.read()
-        self.assertEqual(file_read, expected)
 
 if __name__ == '__main__':
     unittest.main()

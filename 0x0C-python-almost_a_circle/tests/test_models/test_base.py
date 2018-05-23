@@ -14,6 +14,7 @@ load_from_file = Base.load_from_file
 
 
 class TestBaseClass(unittest.TestCase):
+
     """Class for unittest of Base class"""
 
     def test_documentation(self):

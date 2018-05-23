@@ -9,7 +9,9 @@ from models.square import Square
 from io import StringIO
 import sys
 
+
 class TestSquare(unittest.TestCase):
+
     """Unittest for the Square class"""
 
     def test_setter_getter_size(self):
