@@ -12,11 +12,11 @@ if __name__ == '__main__':
     password = argv[2]
     database = argv[3]
 
-    db = MySQLdb.connect(host='localhost', port=3306, user=user, 
+    db = MySQLdb.connect(host='localhost', port=3306, user=user,
                          passwd=password, db=database)
 
     cur = db.cursor()
-    cur.execute("""SELECT cities.id, cities.name, states.name 
+    cur.execute("""SELECT cities.id, cities.name, states.name
     FROM cities INNER JOIN states ON cities.state_id = states.id
     ORDER BY id ASC""")
 
