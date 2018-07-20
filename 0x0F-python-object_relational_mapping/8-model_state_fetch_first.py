@@ -6,7 +6,6 @@ Script prints the first State object from the database
 from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import Session
-from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
@@ -20,11 +19,11 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    state = session.query(State).order_by(State.id).first()
+    state = session.query(State).first()
 
     if state is not None:
         print("{}: {}".format(state.id, state.name))
     else:
-        print("Nothing\n")
+        print("Nothing")
 
     session.close()
