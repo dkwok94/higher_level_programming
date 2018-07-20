@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """
-Script lists all states with a name starting with an uppercase N
 """
 
 import MySQLdb
@@ -11,15 +10,16 @@ if __name__ == '__main__':
     user = argv[1]
     password = argv[2]
     database = argv[3]
+    name = argv[4]
+    quer = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(name)
 
-    db = MySQLdb.connect(host="localhost", port=3306, user=user, 
+    db = MySQLdb.connect(host='localhost', port=3306, user=user, 
                          passwd=password, db=database)
-
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute(quer)
+
     rows = cur.fetchall()
     for row in rows:
-        if row[1][0] == 'N':
-            print(row)
+        print(row)
     cur.close()
     db.close()
