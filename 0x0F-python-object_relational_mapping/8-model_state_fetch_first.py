@@ -20,10 +20,11 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    try:
-        state = session.query(State).first()
-    except NoResultFound:
+    state = session.query(State).first()
+
+    if state is not None:
+        print("{}: {}".format(state.id, state.name))
+    else:
         print("Nothing\n")
 
-    print("{}: {}".format(state.id, state.name))
     session.close()
