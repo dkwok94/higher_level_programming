@@ -4,16 +4,15 @@ Script that lists all State objects from the database
 """
 
 from sys import argv
-import sqlalchemy
 from model_state import Base, State
 from sqlalchemy.orm import Session
 from sqlalchemy import (create_engine)
 
-user = argv[1]
-password = argv[2]
-database = argv[3]
-
 if __name__ == "__main__":
+
+    user = argv[1]
+    password = argv[2]
+    database = argv[3]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
                            (user, password, database), pool_pre_ping=True)
