@@ -15,7 +15,7 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host='localhost', port=3306, user=user,
                          passwd=password, db=database)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name=%s GROUP BY id ASC", (name,))
+    cur.execute("SELECT * FROM states WHERE name=%s ORDER BY id ASC", (name,))
     rows = cur.fetchall()
     for row in rows:
         print(row)
