@@ -20,9 +20,10 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    new_table = session.query(City, State)\
-        .filter(City.state_id == State.id)\
-        .order_by(City.id.asc()).all()
+    new_table = session.query(City)\
+                .join(State)\
+                .filter(City.state_id == State.id)\
+                .order_by(City.id.asc()).all()
 
     for cities, states in new_table:
         print("{}: ({}) {}".format(states.name, cities.id, cities.name))

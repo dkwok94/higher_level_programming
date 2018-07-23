@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script that adds a State object to a database
+Script that deletes a State object from a database
 """
 
 from sys import argv
