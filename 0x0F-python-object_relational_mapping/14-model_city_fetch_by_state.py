@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 """
 Script that lists all City objects from the database
 """
@@ -20,8 +20,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    new_table = session.query(City)\
-                .join(State)\
+    new_table = session.query(City, State)\
                 .filter(City.state_id == State.id)\
                 .order_by(City.id.asc()).all()
 
