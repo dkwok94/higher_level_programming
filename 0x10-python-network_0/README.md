@@ -1,4 +1,4 @@
-# 0x10 - Python - Network #0
+# 0x10. Python - Network #0
 
 ## Overview
 The goal of this project was to get us acquainted with how HTTP worked, what domains and subdomains were, what query strings were, what a URL is, what HTTP requests and responses look like, and how HTTP cookies work.
@@ -122,4 +122,4 @@ $ ./102-catch_me.sh ; echo ""
 You got me!
 ```
 
-2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)0x10 - HTTPS SSL
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
