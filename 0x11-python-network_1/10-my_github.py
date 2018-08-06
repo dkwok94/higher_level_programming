@@ -13,6 +13,6 @@ if __name__ == '__main__':
     r = requests.get('https://api.github.com/user', auth=(username, password))
     if r.status_code != 200:
         print("None")
-    else:         
+    else:
         json_dict = r.json()
         print(json_dict['id'])
