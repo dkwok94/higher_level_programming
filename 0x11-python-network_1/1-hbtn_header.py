@@ -9,4 +9,5 @@ from sys import argv
 if __name__ == '__main__':
     with urllib.request.urlopen(argv[1]) as response:
         headers = dict(response.info())
-        print(headers['X-Request-Id'])
+        if 'X-Request-Id' in headers:
+            print(headers['X-Request-Id'])
