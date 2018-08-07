@@ -18,5 +18,5 @@ if __name__ == '__main__':
     for i in range(11):
         commit = (commits[i])['commit']
         name = (commit['author'])['name']
-        sha = (commit['tree'])['sha']
+        sha = (commits[i])['sha']
         print("{}: {}".format(sha, name))
