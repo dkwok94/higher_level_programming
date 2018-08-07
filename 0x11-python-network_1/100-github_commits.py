@@ -16,7 +16,7 @@ if __name__ == '__main__':
     commits = r.json()
 
     for i in range(10):
-        commit = (commits[i])['commit']
-        name = (commit['author'])['name']
-        sha = (commits[i])['sha']
+        commit = commits[i]
+        name = ((commit['commit'])['author'])['name']
+        sha = commit['sha']
         print("{}: {}".format(sha, name))
