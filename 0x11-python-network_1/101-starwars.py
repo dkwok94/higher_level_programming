@@ -10,7 +10,6 @@ if __name__ == '__main__':
     search = argv[1]
 
     url = url_first = 'https://swapi.co/api/people/'
-    
 
     while url is not None:
         r = requests.get(url, params={'search': search})
