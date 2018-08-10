@@ -9,6 +9,11 @@ This repository contains assignments for the higher level programming portion of
 * Python 3.4.3
 * GCC 5.4.1 20160904
 * PEP8 1.4.6
+* MySQL 5.7.22
+* SQLAlchemy 1.2.10
+* MySQLdb 1.3.13
+* requests 2.2.1
+* urllib 1.17
 
 ## Repositories
 0. **[0x00-python-hello_world](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world)**
@@ -21,5 +26,13 @@ This repository contains assignments for the higher level programming portion of
 7. **[0x07-python-test_driven_development](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x07-python-test_driven_development)**
 8. **[0x08-python-more_classes](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x08-python-more_classes)**
 9. **[0x09-python-everything_is_object](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x09-python-everything_is_object)**
+10. **[0x0A-python-inheritance](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x0A-python-inheritance)**
+11. **[0x0B-python-input_output](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x0B-python-input_output)**
+12. **[0x0C-python-almost_a_circle](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x0C-python-almost_a_circle)**
+13. **[0x0D-SQL_introduction](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x0D-SQL_introduction)**
+14. **[0x0E-SQL_more_queries](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x0E-SQL_more_queries)**
+15. **[0x0F-python-object_relational_mapping](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x0F-python-object_relational_mapping)**
+16. **[0x10-python-network_0](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x10-python-network_0)**
+17. **[0x11-python-network_1](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x11-python-network_1)**
 
 2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
