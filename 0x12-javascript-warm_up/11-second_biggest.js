@@ -15,6 +15,9 @@ if (isNaN(args[2])) {
       second = first;
       first = parseInt(args[i], 10);
     }
+    if (parseInt(args[i], 10) > second && parseInt(args[i], 10) < first) {
+      second = parseInt(args[i], 10);
+    }
   }
   console.log(second);
 }
