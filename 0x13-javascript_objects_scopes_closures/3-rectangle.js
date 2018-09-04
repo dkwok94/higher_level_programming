@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // Class for rectangle with a constructor that initializes two instance
-// attributes
+// attributes and a print function
 
 module.exports = class Rectangle {
   constructor (w, h) {
