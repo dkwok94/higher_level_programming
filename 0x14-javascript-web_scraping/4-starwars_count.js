@@ -3,20 +3,20 @@
 
 const request = require('request');
 const url = process.argv[2];
-const charUrl = 'https://swapi.co/api/people/18/';
 
 request(url, function (err, res, body) {
   if (err) {
     console.log(err);
   } else if (res.statusCode === 200) {
-    let json = JSON.parse(body);
-    let movies = 0;
-    for (let i = 0; i < json.results.length; i++) {
-      if (json.results[i].characters.includes(charUrl)) {
-        movies++;
+    let films = JSON.parse(body).results;
+    let count = 0;
+    for (let i = 0; i < films.length; i++) {
+      let charUrl = 'https://swapi.co/api/people/18/';
+      if (films[i].characters.includes(charUrl)) {
+        count++;
       }
     }
-    console.log(movies);
+    console.log(count);
   } else {
     console.log('Invalid');
   }
