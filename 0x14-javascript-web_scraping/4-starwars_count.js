@@ -11,9 +11,10 @@ request(url, function (err, res, body) {
     let films = JSON.parse(body).results;
     let count = 0;
     for (let i = 0; i < films.length; i++) {
-      let charUrl = 'https://swapi.co/api/people/18/';
-      if (films[i].characters.includes(charUrl)) {
-        count++;
+      for (let j = 0; j < films[i].characters.length; j++) {
+        if (films[i].characters[j].includes('/18/')) {
+	  count++;
+        }
       }
     }
     console.log(count);
