@@ -16,7 +16,7 @@ request(url, function (err, res, body) {
       obj[task.userId] = 0;
     }
     if (task.completed === true) {
-      obj[task.userId] += 1;
+      obj[task.userId]++;
     }
   }
   console.log(obj);
