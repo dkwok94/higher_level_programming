@@ -12,11 +12,11 @@ request(url, function (err, res, body) {
   let tasks = JSON.parse(body);
   let obj = {};
   for (let task of tasks) {
-    if (obj[String(task.userId)] === undefined) {
-      obj[String(task.userId)] = 0;
+    if (obj[task.userId] === undefined) {
+      obj[task.userId] = 0;
     }
     if (task.completed === true) {
-      obj[String(task.userId)] += 1;
+      obj[task.userId] += 1;
     }
   }
   console.log(obj);
