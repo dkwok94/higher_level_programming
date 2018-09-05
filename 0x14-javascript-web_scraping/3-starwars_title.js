@@ -9,8 +9,7 @@ let url = 'http://swapi.co/api/films/';
 request(url + argv[2], function (err, res, body) {
   if (err) {
     console.log(err);
-  } else {
-    let json = JSON.parse(body);
-    console.log(json['title']);
   }
+  let json = JSON.parse(body);
+  console.log(json.title);
 });
