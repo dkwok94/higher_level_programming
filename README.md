@@ -34,5 +34,9 @@ This repository contains assignments for the higher level programming portion of
 15. **[0x0F-python-object_relational_mapping](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x0F-python-object_relational_mapping)**
 16. **[0x10-python-network_0](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x10-python-network_0)**
 17. **[0x11-python-network_1](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x11-python-network_1)**
+18. **[0x12-javascript-warm_up](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x12-javascript-warm_up)**
+19. **[0x13-javascript_objects_scopes_closures](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x13-javascript_objects_scopes_closures)**
+20. **[0x14-javascript-web_scraping](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x14-javascript-web_scraping)**
+21. **[0x15-javascript-web_jquery](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x15-javascript-web_jquery)**
 
 2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
