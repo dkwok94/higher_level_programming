@@ -14,6 +14,8 @@ This repository contains assignments for the higher level programming portion of
 * MySQLdb 1.3.13
 * requests 2.2.1
 * urllib 1.17
+* Node 6.14.4 (Javascript)
+* jQuery
 
 ## Repositories
 0. **[0x00-python-hello_world](https://github.com/dkwok94/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world)**
