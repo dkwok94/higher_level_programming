@@ -89,7 +89,7 @@ vagrant:0x03-python-data_structures$ ./4-main.py
 * no imported modules
 ```
 vagrant:0x03-python-data_structures$ ./5-main.py
-Holberton Shool
+DHK Shool
 hiago
  is fun!
 ```
@@ -185,4 +185,4 @@ Linked list is a palindrome
 
 **[lists.h](lists.h)** - The header file for 13-is_palindrome
 
-2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [DHK School](https://www.dhkschool.com/)

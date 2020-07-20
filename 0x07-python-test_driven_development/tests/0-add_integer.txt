@@ -95,7 +95,7 @@ If a or b are not integers, a TypeError should be thrown
 	  Traceback (most recent call last):
 	  TypeError: a must be an integer
 
-	  >>> add_integer("Holberton", "School")
+	  >>> add_integer("DHK", "School")
 	  Traceback (most recent call last):
 	  TypeError: a must be an integer
 

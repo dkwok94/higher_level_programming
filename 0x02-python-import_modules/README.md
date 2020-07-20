@@ -66,7 +66,7 @@ vagrant:0x02-python-import_modules$ ./3-infinite_add.py  10000000000000000000000
 ```
 vagrant:0x02-python-import_modules$ ./4-hidden_discovery.py
 my_secret_santa
-print_holberton
+print_dhk
 print_school
 ```
 **[5-variable_load.py](5-variable_load.py)** - Imports the variable `a` from a file called `variable_load_5.py` and prints its value
@@ -155,4 +155,4 @@ vagrant:0x02-python-import_modules$ ./103-fast_alphabet.py
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ```
 
-2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [DHK School](https://www.dhkschool.com/)

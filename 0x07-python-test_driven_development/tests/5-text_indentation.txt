@@ -24,7 +24,7 @@ Given a string input, the program should work as expected
 
 Short Strings:
 
-      	 >>> string = "Hello, my name is Derek. What is your name? This is my school: Holberton School"
+      	 >>> string = "Hello, my name is Derek. What is your name? This is my school: DHK School"
 
       	 >>> text_indentation(string)
 	 Hello, my name is Derek.
@@ -33,7 +33,7 @@ Short Strings:
 	 <BLANKLINE>
 	 This is my school:
 	 <BLANKLINE>
-	 Holberton School
+	 DHK School
 
 Long Strings:
 
@@ -83,7 +83,7 @@ Multiple Spaces
 If there are multiple spaces after the three punctuation marks, they should not
 be printed
 
-   	 >>> string = "Hello, my name is Derek.  What is your name?     This is my school:          Holberton School"
+   	 >>> string = "Hello, my name is Derek.  What is your name?     This is my school:          DHK School"
 
 	 >>> text_indentation(string)
 	 Hello, my name is Derek.
@@ -92,9 +92,9 @@ be printed
 	 <BLANKLINE>
 	 This is my school:
 	 <BLANKLINE>
-	 Holberton School
+	 DHK School
 
-   	 >>> string = "Hello, my name is Derek.  What is your name?     This is my school:          Holberton School   "
+   	 >>> string = "Hello, my name is Derek.  What is your name?     This is my school:          DHK School   "
 
 	 >>> text_indentation(string)
 	 Hello, my name is Derek.
@@ -103,7 +103,7 @@ be printed
 	 <BLANKLINE>
 	 This is my school:
 	 <BLANKLINE>
-	 Holberton School
+	 DHK School
 
 	 >>> string = "Hello          ."
 
@@ -203,7 +203,7 @@ Multiple Space Characters:
 
 Punctuation at the end:
 
-	 >>> string = "Hello, my name is Derek. What is your name? This is my school: Holberton School."
+	 >>> string = "Hello, my name is Derek. What is your name? This is my school: DHK School."
 
 	 >>> text_indentation(string)
 	 Hello, my name is Derek.
@@ -212,12 +212,12 @@ Punctuation at the end:
 	 <BLANKLINE>
 	 This is my school:
 	 <BLANKLINE>
-	 Holberton School.
+	 DHK School.
 	 <BLANKLINE>
 
 No spaces after punctuation:
 
-   	 >>> string = "Hello, my name is Derek.What is your name?This is my school:Holberton School"
+   	 >>> string = "Hello, my name is Derek.What is your name?This is my school:DHK School"
 
 	 >>> text_indentation(string)
 	 Hello, my name is Derek.
@@ -226,11 +226,11 @@ No spaces after punctuation:
 	 <BLANKLINE>
 	 This is my school:
 	 <BLANKLINE>
-	 Holberton School
+	 DHK School
 
 Leading and Trailing Whitespace:
 
-	>>> string = "    Hello, my name is Derek. What is your name? This is my school: Holberton School"
+	>>> string = "    Hello, my name is Derek. What is your name? This is my school: DHK School"
 
 	 >>> text_indentation(string)
 	 Hello, my name is Derek.
@@ -239,9 +239,9 @@ Leading and Trailing Whitespace:
 	 <BLANKLINE>
 	 This is my school:
 	 <BLANKLINE>
-	 Holberton School
+	 DHK School
 
-	 >>> string = "Hello, my name is Derek. What is your name? This is my school: Holberton School    "
+	 >>> string = "Hello, my name is Derek. What is your name? This is my school: DHK School    "
 
 	 >>> text_indentation(string)
 	 Hello, my name is Derek.
@@ -250,7 +250,7 @@ Leading and Trailing Whitespace:
 	 <BLANKLINE>
 	 This is my school:
 	 <BLANKLINE>
-	 Holberton School
+	 DHK School
 
 
 Errors

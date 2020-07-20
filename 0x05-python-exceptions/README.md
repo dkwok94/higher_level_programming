@@ -39,7 +39,7 @@ nb_print: 5
 vagrant:0x05-python-exceptions$ ./1-main.py
 [1, 2, 3] is not an integer
 -89
-Holberton is not an integer
+DHK is not an integer
 ```
 
 **[2-safe_print_list_integers.py](2-safe_print_list_integers.py)** - Prints the first `x` elements of a list and only if they are integers
@@ -54,7 +54,7 @@ nb_print: 5
 12345Traceback (most recent call last):
   File "./2-main.py", line 14, in <module>
     nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
-  File "/home/vagrant/holbertonschool-higher_level_programming/0x05-python-exceptions/2-safe_print_list_integers.py", line 6, in safe_print_list_integers
+  File "/home/vagrant/dhkschool-higher_level_programming/0x05-python-exceptions/2-safe_print_list_integers.py", line 6, in safe_print_list_integers
     print("{:d}".format(my_list[i]), end='')
 IndexError: list index out of range
 ```
@@ -106,7 +106,7 @@ vagrant:0x05-python-exceptions$ ./100-main.py
 89
 -89
 Exception: Unknown format code 'd' for object of type 'str'
-Holberton is not an integer
+DHK is not an integer
 ```
 
 **[101-safe_function.py](101-safe_function.py)** - Executes a function safely
@@ -182,4 +182,4 @@ result of print_list: None
  13     >>  103 LOAD_FAST                2 (result)
             106 RETURN_VALUE
 ```
-2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [DHK School](https://www.dhkschool.com/)

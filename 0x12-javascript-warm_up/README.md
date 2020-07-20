@@ -31,9 +31,9 @@ Javascript is amazing
 ```
 $ ./2-arguments.js 
 No argument
-$ ./2-arguments.js Holberton
+$ ./2-arguments.js DHK
 Argument found
-$ ./2-arguments.js Holberton School
+$ ./2-arguments.js DHK School
 Arguments found
 ```
 
@@ -41,8 +41,8 @@ Arguments found
 ```
 $ ./3-value_argument.js 
 No argument
-$ ./3-value_argument.js Holberton
-Holberton
+$ ./3-value_argument.js DHK
+DHK
 ```
 
 **[4-concat.js](4-concat.js)** - Takes the first two arguments supplied to the program and creates a sentence with the word 'is' in between the two arguments
@@ -65,7 +65,7 @@ $ ./5-to_integer.js "89"
 My number: 89
 $ ./5-to_integer.js 89.89
 My number: 89
-$ ./5-to_integer.js Holberton
+$ ./5-to_integer.js DHK
 Not a number
 ```
 
@@ -96,7 +96,7 @@ Missing number of occurrences
 ```
 $ ./8-square.js
 Missing size
-$ ./8-square.js Holberton
+$ ./8-square.js DHK
 Missing size
 $ ./8-square.js 2
 XX
@@ -235,4 +235,4 @@ $ ./103-object_fct.js
 { type: 'object', value: 15, incr: [Function] }
 ```
 
-2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [DHK School](https://www.dhkschool.com/)

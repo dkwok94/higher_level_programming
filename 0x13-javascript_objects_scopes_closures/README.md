@@ -217,7 +217,7 @@ const nbOccurences = require('./7-occurrences').nbOccurences;
 
 console.log(nbOccurences([1, 2, 3, 4, 5, 6], 3));
 console.log(nbOccurences([3, 2, 3, 4, 5, 3, 3], 3));
-console.log(nbOccurences(["H", 12, "c", "H", "Holberton", 8], "H"));
+console.log(nbOccurences(["H", 12, "c", "H", "DHK", 8], "H"));
 
 $ ./7-main.js
 1
@@ -232,11 +232,11 @@ $ cat 8-main.js
 const esrever = require('./8-esrever').esrever;
 
 console.log(esrever([1, 2, 3, 4, 5]));
-console.log(esrever(["Holberton", 89, { id: 12 }, "String"]));
+console.log(esrever(["DHK", 89, { id: 12 }, "String"]));
 
 $ ./8-main.js
 [ 5, 4, 3, 2, 1 ]
-[ 'String', { id: 12 }, 89, 'Holberton' ]
+[ 'String', { id: 12 }, 89, 'DHK' ]
 ```
 
 **[9-logme.js](9-logme.js)** - Prints the number of arguments already printed along with the new argument. The format is `<number of arguments printed>: <current argument value>`
@@ -246,12 +246,12 @@ $ cat 9-main.js
 const logMe = require('./9-logme').logMe;
 
 logMe("Hello");
-logMe("Holberton");
+logMe("DHK");
 logMe("School");
 
 $ ./9-main.js
 0: Hello
-1: Holberton
+1: DHK
 2: School
 ```
 
@@ -283,4 +283,4 @@ c
 59
 ```
 
-2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [DHK School](https://www.dhkschool.com/)

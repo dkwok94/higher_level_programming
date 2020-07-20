@@ -39,17 +39,17 @@ $ ./3-methods.sh 0.0.0.0:5000/route_4
 OPTIONS, HEAD, PUT
 ```
 
-**[4-header.sh](4-header.sh)** - script takes in a URL, sends a `GET` request with the header variable `X-HolbertonSchool-User-Id` sent with the value `98`
+**[4-header.sh](4-header.sh)** - script takes in a URL, sends a `GET` request with the header variable `X-DHKSchool-User-Id` sent with the value `98`
 ```
 $ ./4-header.sh 0.0.0.0:5000/route_5 ; echo ""
-Hello Holberton School!
+Hello DHK School!
 ```
 
-**[5-post_params.sh](5-post_params.sh)** - script takes a URL, sends a `POST` request, and sends `email` variable with the value `hr@holbertonschool.com` and `subject` with the value `I will always be here for PLD`.
+**[5-post_params.sh](5-post_params.sh)** - script takes a URL, sends a `POST` request, and sends `email` variable with the value `hr@dhkschool.com` and `subject` with the value `I will always be here for PLD`.
 ```
 $ ./5-post_params.sh 0.0.0.0:5000/route_6 ; echo ""
 POST params:
-    email: hr@holbertonschool.com
+    email: hr@dhkschool.com
     subject: I will always be here for PLD
 ```
 
@@ -122,4 +122,4 @@ $ ./102-catch_me.sh ; echo ""
 You got me!
 ```
 
-2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [DHK School](https://www.dhkschool.com/)

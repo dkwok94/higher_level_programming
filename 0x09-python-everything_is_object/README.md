@@ -48,15 +48,15 @@ I did one of the advanced scripts and it is below:
 * no imported module
 ```
 vagrant:0x09-python-everything_is_object$ ./100-main.py
-Holberton
-Holberton, Holberton
-Holberton, Holberton, Holberton
-Holberton, Holberton, Holberton, Holberton
-Holberton, Holberton, Holberton, Holberton, Holberton
-Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
-Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
-Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
-Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
-Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton, Holberton
+DHK
+DHK, DHK
+DHK, DHK, DHK
+DHK, DHK, DHK, DHK
+DHK, DHK, DHK, DHK, DHK
+DHK, DHK, DHK, DHK, DHK, DHK
+DHK, DHK, DHK, DHK, DHK, DHK, DHK
+DHK, DHK, DHK, DHK, DHK, DHK, DHK, DHK
+DHK, DHK, DHK, DHK, DHK, DHK, DHK, DHK, DHK
+DHK, DHK, DHK, DHK, DHK, DHK, DHK, DHK, DHK, DHK
 ```
-2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [Holberton School](https://www.holbertonschool.com/)
+2018 - All programs written by Derek Kwok ([@dlangshk](https://twitter.com/dlangshk)) at [DHK School](https://www.dhkschool.com/)
