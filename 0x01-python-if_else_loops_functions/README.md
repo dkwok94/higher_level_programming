@@ -152,8 +152,8 @@ g is lower
 * cannot use `str.upper()` or `str.isupper()`
 ```
 vagrant:0x01-python-if_else_loops_functions$ ./8-main.py
-HOLBERTON
-HOLBERTON SCHOOL 98 BATTERY STREET
+DHK
+DHK SCHOOL 98 BATTERY STREET
 ```
 **[9-print_last_digit.py](9-print_last_digit.py)** - Prints the last digit of a number and returns the last digit
 * no imported modules
